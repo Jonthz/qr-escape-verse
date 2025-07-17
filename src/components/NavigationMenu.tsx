@@ -151,7 +151,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
 
       {renderSection(
         hints,
-        'Pistas',
+        'Pistas para Alpha',
         <Lightbulb className="h-5 w-5 text-neon-cyan" />,
         'No hay pistas disponibles aún. ¡Explora para encontrarlas!',
         'found'

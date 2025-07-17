@@ -1,0 +1,113 @@
+{
+  "hints": [
+    {
+      "id": "pista1",
+      "type": "hint",
+      "title": "El Primer Paso",
+      "content": "Las respuestas no siempre están donde las buscas. A veces, hay que mirar hacia arriba para encontrar lo que está abajo. La entrada principal guarda más secretos de los que imaginas.",
+      "found": false
+    },
+    {
+      "id": "pista2",
+      "type": "hint",
+      "title": "Los Números Hablan",
+      "content": "Cuando encuentres la secuencia 4-8-15-16-23-42, recuerda que cada número tiene su lugar en el universo. La suma de sus dígitos te dará la clave para el siguiente nivel.",
+      "found": false
+    },
+    {
+      "id": "pista3",
+      "type": "hint",
+      "title": "Reflejo de la Verdad",
+      "content": "Los espejos no mienten, pero a veces muestran más de lo que esperamos. Si ves tu reflejo fragmentado, sigue las líneas que se rompen hacia el corazón del laberinto.",
+      "found": false
+    }
+  ],
+  "riddles": [
+    {
+      "id": "acertijo1",
+      "type": "riddle",
+      "title": "El Enigma del Tiempo",
+      "content": "Busca el objeto que marca las horas en la habitación. Su posición en el momento exacto de las 12:00 revelará la siguiente pista.",
+      "answer": "reloj",
+      "solved": false
+    },
+    {
+      "id": "acertijo2",
+      "type": "riddle",
+      "title": "La Habitación Secreta",
+      "content": "En una esquina de la habitación hay un mueble con 4 divisiones. Cuenta cuántos objetos similares hay en total y encuentra aquel que está marcado con el número correspondiente.",
+      "answer": "estante",
+      "solved": false
+    },
+    {
+      "id": "acertijo3",
+      "type": "riddle",
+      "title": "El Código del Futuro",
+      "content": "Busca el dispositivo que emite luz artificial en la habitación. El objeto que buscas está oculto detrás de la tercera fuente de luz desde la entrada.",
+      "answer": "lampara",
+      "solved": false
+    }
+  ],
+  "easterEggs": [
+    {
+      "id": "huevo1",
+      "type": "easter_egg",
+      "title": "¡El Desarrollador Secreto!",
+      "content": "🎉 ¡Felicidades! Has encontrado el primer huevo de pascua. Este escape room fue creado con mucho cariño y líneas de código. ¿Sabías que el código QR es en realidad una matriz bidimensional de información? ¡Ahora eres parte del club secreto de los exploradores de códigos!",
+      "found": false
+    },
+    {
+      "id": "huevo2",
+      "type": "easter_egg",
+      "title": "El Gato de Schrödinger",
+      "content": "🐱 ¡Has descubierto el gato cuántico! En el mundo de la programación, a veces los bugs existen y no existen al mismo tiempo, hasta que alguien los observa. Este gato está definitivamente vivo y celebrando tu curiosidad. ¡Miau-nificent work!",
+      "found": false
+    },
+    {
+      "id": "huevo3",
+      "type": "easter_egg",
+      "title": "La Fórmula de la Diversión",
+      "content": "⚡ ¡Fórmula encontrada! DIVERSIÓN = (CURIOSIDAD × PERSEVERANCIA) + CÓDIGOS_QR. Has demostrado tener la ecuación perfecta para resolver cualquier misterio. Este huevo de pascua te otorga poderes especiales... bueno, al menos una sonrisa.",
+      "found": false
+    },
+    {
+      "id": "huevo4",
+      "type": "easter_egg",
+      "title": "El Mensaje del Futuro",
+      "content": "🚀 ¡Transmisión desde el año 3023! Los escape rooms evolucionaron hasta convertirse en realidades paralelas. Tu habilidad para resolver este acertijo del siglo XXI te convierte en un candidato perfecto para nuestras aventuras temporales. ¡Mantén este mensaje en secreto!",
+      "found": false
+    }
+  ],
+  "qrMappings": {
+    "https://escape.room/pista/1": "pista1",
+    "https://escape.room/pista/2": "pista2",  
+    "https://escape.room/pista/3": "pista3",
+    "https://escape.room/acertijo/1": "acertijo1",
+    "https://escape.room/acertijo/2": "acertijo2",
+    "https://escape.room/acertijo/3": "acertijo3",
+    "https://escape.room/huevo/1": "huevo1",
+    "https://escape.room/huevo/2": "huevo2",
+    "https://escape.room/huevo/3": "huevo3",
+    "https://escape.room/huevo/4": "huevo4",
+    "pista1": "pista1",
+    "pista2": "pista2",
+    "pista3": "pista3",
+    "acertijo1": "acertijo1",
+    "acertijo2": "acertijo2",
+    "acertijo3": "acertijo3",
+    "huevo1": "huevo1",
+    "huevo2": "huevo2",
+    "huevo3": "huevo3",
+    "huevo4": "huevo4",
+    "1001": "pista1",
+    "1002": "pista2",
+    "1003": "pista3",
+    "2001": "acertijo1",
+    "2002": "acertijo2",
+    "2003": "acertijo3",
+    "3001": "huevo1",
+    "3002": "huevo2",
+    "3003": "huevo3",
+    "3004": "huevo4"
+  }
+}

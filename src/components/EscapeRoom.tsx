@@ -3,6 +3,8 @@ import { QRScanner } from './QRScanner';
 import { ContentDisplay } from './ContentDisplay';
 import { NavigationMenu } from './NavigationMenu';
 import { QRTestCodes } from './QRTestCodes';
+import { Timer } from './Timer';
+import { FinalPasswordPanel } from './FinalPasswordPanel';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { useGameState } from '@/hooks/useGameState';
@@ -18,9 +20,12 @@ import {
 
 export const EscapeRoom: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [finalDoorUnlocked, setFinalDoorUnlocked] = useState(false);
   const {
     discoveredContent,
     currentContent,
+    isGameStarted,
+    gameTime,
     processQRCode,
     solveRiddle,
     markAsFound,
@@ -48,11 +53,19 @@ export const EscapeRoom: React.FC = () => {
 
   const handleReset = () => {
     resetGame();
+    setFinalDoorUnlocked(false);
     toast({
       title: "Juego Reiniciado",
       description: "Tu progreso ha sido borrado",
     });
   };
+
+  const handleFinalUnlock = () => {
+    setFinalDoorUnlocked(true);
+  };
+
+  // Determinar si mostrar el panel de contraseña final
+  const shouldShowPasswordPanel = discoveredContent.length >= 3; // Ajusta esta condición según tu lógica
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -96,6 +109,11 @@ export const EscapeRoom: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Main Content Area */}
           <div className="flex-1 space-y-6">
+            {/* Timer Display */}
+            <Timer 
+              isGameStarted={isGameStarted}
+              onTimeUpdate={(time) => {}}
+            />
             {/* Welcome Card - Only show if no content discovered */}
             {discoveredContent.length === 0 && !currentContent && (
               <Card className="p-8 text-center holo-border">
@@ -163,6 +181,13 @@ export const EscapeRoom: React.FC = () => {
               content={currentContent}
               onSolveRiddle={solveRiddle}
               onMarkFound={markAsFound}
+            />
+
+            {/* Final Password Panel */}
+            <FinalPasswordPanel
+              isVisible={shouldShowPasswordPanel}
+              isUnlocked={finalDoorUnlocked}
+              onUnlock={handleFinalUnlock}
             />
           </div>
 

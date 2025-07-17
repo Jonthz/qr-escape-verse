@@ -140,24 +140,17 @@ export const ContentDisplay: React.FC<ContentDisplayProps> = ({
             <p className="text-lg leading-relaxed">{content.content}</p>
           </div>
 
-          {/* Riddle Answer Section */}
+          {/* Riddle Object Finding Section */}
           {content.type === 'riddle' && !content.solved && (
             <div className="space-y-4">
-              <div className="flex gap-3">
-                <Input
-                  placeholder="Escribe tu respuesta aquí..."
-                  value={answer}
-                  onChange={(e) => setAnswer(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSubmitAnswer()}
-                  className="flex-1 bg-input border-border text-foreground"
-                />
-                <Button 
-                  onClick={handleSubmitAnswer}
-                  disabled={!answer.trim()}
-                  className="neon-glow"
-                >
-                  Verificar
-                </Button>
+              <div className="p-4 bg-neon-purple/10 border border-neon-purple rounded-lg text-center">
+                <Brain className="mx-auto h-8 w-8 text-neon-purple mb-2" />
+                <p className="text-lg font-semibold text-neon-purple">
+                  Escanea el QR del objeto que encontraste
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  Busca el objeto en la habitación y escanea su código QR para resolver el acertijo
+                </p>
               </div>
             </div>
           )}
